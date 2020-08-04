@@ -1,0 +1,581 @@
+/*
+Template:ystandard
+Theme Name:ystandard-child
+Theme URI: https://wp-ystandard.com
+Author: yosiakatsuki
+Author URI: https://yosiakatsuki.net
+Description:「自分色に染めた、自分だけのサイトを作る楽しさ」を感じてもらうために作った一風変わったWordPressテーマ「ystandard」の子テーマ
+Version: 3.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body{
+  color: #141414;
+  /* font-family: YakuHanJPs,YakuHanJP,Neue Frutiger,Noto Sans Japanese,sans-serif; */
+  /* font-family: "Hiragino Sans W3", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; */
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  letter-spacing: .055em;
+  word-wrap: break-word;
+  /* webkit-text-size-adjust: 100%; */
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+}
+.site-header {
+    background: #000;
+}
+.header__dscr{
+  color: eee;
+}
+.share-btn__link{
+  padding: .3rem 0;
+}
+span.share-btn__text {
+    font-size: .8rem;
+    font-weight: bold;
+}
+.single .wp-block-image,
+.single .post-thumbnail,
+.single .wp-block-gallery {
+    margin: 1.5em -1rem 0;
+}
+.pagination{
+  justify-content: center;
+}
+h1.entry-title {
+  color: #000;
+  line-height: 1.25em;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+.entry-content h2 {
+  margin: 3.5rem 0 2rem -1rem;
+  font-weight: bold;
+  border-left: 4px #333 solid;
+  padding-left: 1em;
+}
+table{
+  font-size: .9rem;
+}
+td,th{
+  text-align: -webkit-center;
+}
+th{
+  font-weight: 600;
+}
+.scroll {
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.comment-text h3, .entry-content h3 {
+  border-bottom: 1px solid #333;
+  font-weight: bold;
+  margin: 2rem 0 1rem;
+}
+.ys-posts__content{
+    font-size: .85rem;
+    line-height: 1.4;
+}
+/* footer */
+.site-footer{
+  background-color: #f1f1f1;
+  color: #000;
+}
+.site-footer a{
+  color: #000;
+}
+/* Ads */
+.ads {
+    margin: 1.5rem 0 0 0;
+}
+.pc-ads{
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.archive-ads {
+    background: #fff;
+    position: relative;
+}
+.archive-ads .adsbygoogle{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/* サイドバー */
+.sidebar{
+  padding: 0 0 0 2rem;
+  display: -webkit-box;
+}
+.widget{
+  margin-bottom: 1rem;
+}
+.sidebar-wrapper{
+  display: flex;
+}
+.widget_search,
+.widget_text,
+.widget_top-posts,
+.widget_newpostcatch{
+  padding: 0.5em;
+}
+.sidebar__widget{
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 1rem;
+  flex: 0 0 100%;
+  min-height: calc(100vh - 60px);
+}
+@supports (position: sticky) {
+  .sidebar__widget{
+    align-self: flex-end;
+  }
+}
+.widget-title{
+  font-size: .8rem;
+}
+#custom_html-5{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+}
+/* 人気記事 */
+
+.popularpost {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+.popularpost span {
+    border-bottom: 1px solid #333;
+}
+
+/* SNSボタン */
+.share-btn__list{
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.share-btn__item{
+  flex: 0 0 33%;
+}
+.share-btn__link {
+  border: solid 2px;
+  padding: 6px 15px;
+  line-height: 1.5;
+  overflow: unset;
+}
+.share-btn__icon{
+  top: 6px;
+  left: 10px;
+  font-size: 1.5rem;
+}
+.share-btn__link:before,
+.follow-box__link:before{
+  position: absolute;
+  content: '';
+  background: currentColor;
+  width: 8px;
+  height: 2px;
+  bottom: -2px;
+  right: -5px;
+}
+.share-btn__link:after,
+.follow-box__link:after{
+  position: absolute;
+  content: '';
+  background: currentColor;
+  width: 2px;
+  height: 8px;
+  bottom: -5px;
+  right: -2px;
+}
+.follow-box__link{
+  border: 2px solid;
+  border-radius: 0;
+  position: relative;
+}
+.follow-box__item{
+  margin-bottom: .5rem;
+}
+.sns-border--twitter {
+  border-color: rgba(14,112,193,.7);
+}
+.sns-border--twitter:before,
+.sns-border--twitter:after{
+  background: rgba(14,112,193,.7);
+}
+.sns-border--facebook {
+  border-color: rgba(38,58,100,.7);
+}
+.sns-border--facebook:before,
+.sns-border--facebook:after{
+  background: rgba(38,58,100,.7);
+}
+.sns-border--hatenabookmark {
+  border-color: rgba(0,78,134,.7);
+}
+.sns-border--hatenabookmark:before,
+.sns-border--hatenabookmark:after{
+  background: rgba(0,78,134,.7);
+}
+.sns-border--feedly {
+  border-color: rgba(98,130,47,.7);
+}
+.sns-border--feedly:before,
+.sns-border--feedly:after{
+  background: rgba(98,130,47,.7);
+}
+
+/* ボタン */
+.wp-block-button a {
+    border-radius: 0;
+    position: relative;
+    font-size: .9rem;
+}
+.wp-block-button a:not(.has-text-color) {
+    color: #fff;
+}
+.wp-block-button a:not(.has-background){
+  background: #222;
+}
+span.std-btn,
+span.expedia-btn,
+span.expansys-btn,
+span.trip-btn,
+span.rakuten-btn,
+span.amazon-btn,
+span.docomo-btn,
+span.softbank-btn,
+span.au-btn{
+	display: block;
+	text-align: center;
+  font-size: .9rem;
+}
+span.std-btn a,
+span.expedia-btn a,
+span.expansys-btn a,
+span.trip-btn a,
+span.rakuten-btn a,
+span.amazon-btn a,
+span.docomo-btn a,
+span.softbank-btn a,
+span.au-btn a{
+  color: #fff;
+  padding: .5rem 1.5rem;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  border-radius: 4px;
+}
+
+span.std-btn a:hover,
+span.expedia a:hover,
+span.expansys-btn a:hover,
+span.trip a:hover,
+span.rakuten-btn a:hover,
+span.amazon-btn a:hover,
+span.docomo-btn a:hover,
+span.au-btn a:hover,
+span.softbank-btn a:hover{
+	box-shadow: 3px 3px 6px rgba(0,0,0,.2);
+}
+.wp-block-button a,
+span.std-btn a{
+  background-color: #222;
+  color: #fff;
+}
+
+span.docomo-btn a{
+  background-color: #CC0033;
+}
+
+span.au-btn a{
+  background-color: #eb5505;
+}
+
+span.softbank-btn a{
+  background-color: #bbbcbe;
+}
+
+span.amazon-btn a{
+  background-color: #FF9900;
+}
+
+.contact a{
+  width: 100%;
+}
+.amazon-button a{
+	background-color: #FF9900;
+}
+.rakuten-button a{
+	background-color: #bf0000;
+}
+.yahoo-button a {
+  background-color: #410093;
+}
+
+
+/* rinker */
+div.yyi-rinker-contents div.yyi-rinker-title a{
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+div.yyi-rinker-contents div.yyi-rinker-detail {
+    padding-left: 5px;
+}
+div.yyi-rinker-detail .credit {
+    display: none;
+}
+.freelink1,
+.amazonlink,
+.rakutenlink,
+.yahoolink,
+.amazonkindlelink{
+  width: 45%;
+}
+div.yyi-rinker-contents ul.yyi-rinker-links li a{
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    text-align: center;
+}
+/* appHTML */
+
+.apphtml{
+	border: 1px solid #ccc;
+  padding: 10px 5px;
+}
+img.appIconImg {
+    border: none;
+    float:left;
+    margin: 0px 15px 15px 5px;
+}
+span.badgeL{
+  display:inline-block;
+  margin:4px
+}
+.color__site-header a,
+.icon-deco-circle{
+  cursor: pointer;
+  display: inline-block;
+  background-size: 100%;
+  text-indent: -9999px;
+  font-size: 5rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -moz-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  -o-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+.color__site-header a{
+  background-image: url(../ystandard2-child/img/dekoniku-wh.svg);
+  height: 6rem;
+  width: 15rem;
+}
+.icon-deco-circle{
+  background-image: url(../ystandard2-child/img/dekoniku-circle-box.svg);
+  height: 10rem;
+  width: 10rem;
+}
+i.icon-deco-circle:hover {
+    transition: .5s;
+    transform: rotateZ( 360deg );
+    transform-origin: 50% 84.5px;
+}
+figcaption{
+  font-style: normal;
+}
+/* ブログカード */
+.ys-blog-card .ys-blog-card__thumb{
+  width: 160px;
+}
+
+/* アプリーチ */
+.appreach {
+  text-align: left;
+  padding: 10px;
+  border: 1px solid #7C7C7C;
+  overflow: hidden;
+}
+.appreach:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.appreach p {
+  margin: 0;
+}
+.appreach a:after {
+  display: none;
+}
+.appreach__icon {
+  float: left;
+  border-radius: 10%;
+  overflow: hidden;
+  margin: 0 3% 0 0 !important;
+  width: 25% !important;
+  height: auto !important;
+  max-width: 120px !important;
+}
+.appreach__detail {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 72%;
+  max-width: 72%;
+}
+.appreach__detail:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.appreach__name {
+  font-size: 16px;
+  line-height: 1.5em !important;
+  max-height: 3em;
+  overflow: hidden;
+}
+.appreach__info {
+  font-size: 12px !important;
+}
+.appreach__developper, .appreach__price {
+  margin-right: 0.5em;
+}
+.appreach__posted a {
+  margin-left: 0.5em;
+}
+.appreach__links {
+  float: left;
+  height: 40px;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+.appreach__aslink img {
+  margin-right: 10px;
+  height: 40px;
+  width: 135px;
+}
+.appreach__gplink img {
+  height: 40px;
+  width: 134.5px;
+}
+.top-banner img{
+    margin: 0 auto 2rem;
+    display: block;
+}
+@media screen and (max-width: 600px) {
+  [class*=flex__col] {
+    padding: .5rem 1rem;
+  }
+  .header__row.-center:before{
+    content: none;
+  }
+
+  .archive__item .flex--column{
+    flex-direction: row;
+    -ms-flex-direction: row;
+  }
+  .card__img{
+    width: 40%;
+  }
+  .archive__detail.card__text{
+    width: 60%;
+    padding: .2rem .5rem;
+  }
+  .archive__detail-title {
+    margin: .5em 0;
+    font-size: .9rem;
+  }
+  .archive__meta{
+    font-size: .7rem;
+  }
+  figure.wp-block-table {
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  table{
+  font-size: .8rem;
+}
+}
+
+@media screen and (max-width: 550px) and (min-width: 321px){
+    .flex__col--md-3 {
+      flex: 0 0 32.5%;
+    }
+    .share-btn__link {
+      line-height: 1;
+    }
+    .share-btn__icon{
+      top: 5px;
+      left: 10px;
+      font-size: 1.2rem;
+    }
+    .follow-box__list ul {
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-evenly;
+    }
+    .follow-box__item{
+      flex: 0 0 30%;
+    }
+    .follow-box__text {
+        font-size: .9rem;
+        font-weight: bold;
+    }
+    .follow-box__link .svg-inline--fa{
+      vertical-align: -.3em;
+    }
+    span.std-btn a,
+    span.expedia-btn a,
+    span.expansys-btn a,
+    span.trip-btn a,
+    span.rakuten-btn a,
+    span.amazon-btn a,
+    span.docomo-btn a,
+    span.softbank-btn a,
+    span.au-btn a{
+      line-height: 1.2;
+    }
+    div.yyi-rinker-contents div.yyi-rinker-box{
+        display: block !important;
+    }
+    div.yyi-rinker-contents div.yyi-rinker-image{
+        width: 100% !important;
+    }
+    div.yyi-rinker-contents div.yyi-rinker-info{
+        width: 100% !important;
+    }
+    div.yyi-rinker-contents div.yyi-rinker-title a{
+        font-size: .9rem;
+    }
+    div.yyi-rinker-contents div.yyi-rinker-detail{
+        font-size: .7rem;
+        padding-left: 0;
+    }
+    .freelink1,
+    .amazonkindlelink,
+    .rakutenlink,
+    .yahoolink,
+    .amazonlink{
+      width: 100%;
+    }
+}
+@media screen and (min-width: 600px){
+  .ys-post-list__item.v-img{
+    width: 100%;
+  }
+}
