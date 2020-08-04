@@ -475,6 +475,9 @@ figcaption{
     margin: 0 auto 2rem;
     display: block;
 }
+
+/* メディアクエリ */
+
 @media screen and (max-width: 600px) {
   [class*=flex__col] {
     padding: .5rem 1rem;
